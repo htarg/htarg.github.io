@@ -12,39 +12,57 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Avatar; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _date__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./date */ "./components/date.js");
 var _jsxFileName = "D:\\Proyectos\\htarg.github.io\\components\\avatar.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 function Avatar(_ref) {
   var name = _ref.name,
-      picture = _ref.picture;
+      picture = _ref.picture,
+      date = _ref.date;
   return __jsx("div", {
     className: "flex items-center",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 3,
+      lineNumber: 5,
       columnNumber: 5
     }
   }, __jsx("img", {
     src: picture,
-    className: "w-12 h-12 rounded-full mr-4",
+    className: "w-12 h-auto mr-4",
     alt: name,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 4,
+      lineNumber: 6,
       columnNumber: 7
     }
   }), __jsx("div", {
-    className: "text-xl font-bold",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5,
+      lineNumber: 7,
       columnNumber: 7
     }
-  }, name));
+  }, "Escrito por ", __jsx("span", {
+    className: "font-bold",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7,
+      columnNumber: 24
+    }
+  }, name), " el ", __jsx(_date__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    dateString: date,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7,
+      columnNumber: 69
+    }
+  })));
 }
 
 /***/ }),
@@ -108,7 +126,7 @@ function CoverImage(_ref) {
   var image = __jsx("img", {
     src: src,
     alt: "Cover Image for ".concat(title),
-    className: classnames__WEBPACK_IMPORTED_MODULE_1___default()('shadow-small', {
+    className: classnames__WEBPACK_IMPORTED_MODULE_1___default()('mx-auto shadow-small', {
       'hover:shadow-medium transition-shadow duration-200': slug
     }),
     __self: this,
@@ -659,13 +677,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_avatar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/avatar */ "./components/avatar.js");
-/* harmony import */ var _components_date__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/date */ "./components/date.js");
-/* harmony import */ var _components_cover_image__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/cover-image */ "./components/cover-image.js");
-/* harmony import */ var _components_post_title__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/post-title */ "./components/post-title.js");
+/* harmony import */ var _components_cover_image__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/cover-image */ "./components/cover-image.js");
+/* harmony import */ var _components_post_title__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/post-title */ "./components/post-title.js");
 var _jsxFileName = "D:\\Proyectos\\htarg.github.io\\components\\post-header.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
 
 
 
@@ -674,46 +690,54 @@ function PostHeader(_ref) {
       coverImage = _ref.coverImage,
       date = _ref.date,
       author = _ref.author;
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_post_title__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("div", {
+    className: "flex justify-between",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8,
+      columnNumber: 5
+    }
+  }, __jsx("div", {
+    className: "flex-initial",
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9,
       columnNumber: 7
     }
-  }, title), __jsx("div", {
-    className: "hidden md:block md:mb-12",
+  }, __jsx(_components_post_title__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10,
-      columnNumber: 7
+      columnNumber: 11
     }
-  }, __jsx(_components_avatar__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    name: author.name,
-    picture: author.picture,
+  }, title)), __jsx("div", {
+    className: "flex-initial",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11,
+      lineNumber: 12,
       columnNumber: 9
     }
-  })), __jsx("div", {
-    className: "mb-8 md:mb-16 -mx-5 sm:mx-0",
+  }, __jsx("div", {
+    className: "hidden md:block md:mb-12",
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13,
-      columnNumber: 7
+      columnNumber: 11
     }
-  }, __jsx(_components_cover_image__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    title: title,
-    src: coverImage,
+  }, __jsx(_components_avatar__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    name: author.name,
+    picture: author.picture,
+    date: date,
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14,
-      columnNumber: 9
+      columnNumber: 13
     }
   })), __jsx("div", {
     className: "max-w-2xl mx-auto",
@@ -721,7 +745,7 @@ function PostHeader(_ref) {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 16,
-      columnNumber: 7
+      columnNumber: 11
     }
   }, __jsx("div", {
     className: "block md:hidden mb-6",
@@ -729,34 +753,36 @@ function PostHeader(_ref) {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 17,
-      columnNumber: 9
+      columnNumber: 13
     }
   }, __jsx(_components_avatar__WEBPACK_IMPORTED_MODULE_1__["default"], {
     name: author.name,
     picture: author.picture,
+    date: date,
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 18,
-      columnNumber: 11
+      columnNumber: 15
     }
-  })), __jsx("div", {
-    className: "mb-6 text-lg",
+  }))))), __jsx("div", {
+    className: "mb-8 md:mb-16 -mx-5 sm:mx-0",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20,
+      lineNumber: 23,
+      columnNumber: 7
+    }
+  }, __jsx(_components_cover_image__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    title: title,
+    src: coverImage,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24,
       columnNumber: 9
     }
-  }, __jsx(_components_date__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    dateString: date,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21,
-      columnNumber: 11
-    }
-  }))));
+  })));
 }
 
 /***/ }),
@@ -1360,7 +1386,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
 // Module
-exports.push([module.i, ".markdown-styles_markdown__1x9gM {\n  font-size: 1.125rem;\n  line-height: 1.625;\n}\n\n.markdown-styles_markdown__1x9gM p,\n.markdown-styles_markdown__1x9gM ul,\n.markdown-styles_markdown__1x9gM ol,\n.markdown-styles_markdown__1x9gM blockquote {\n  margin-top: 1.5rem;\n  margin-bottom: 1.5rem;\n}\n\n.markdown-styles_markdown__1x9gM h2 {\n  font-size: 1.875rem;\n  margin-top: 3rem;\n  margin-bottom: 1rem;\n  line-height: 1.375;\n}\n\n.markdown-styles_markdown__1x9gM h3 {\n  font-size: 1.5rem;\n  margin-top: 2rem;\n  margin-bottom: 1rem;\n  line-height: 1.375;\n}\n", "",{"version":3,"sources":["D:/Proyectos/htarg.github.io/components/markdown-styles.module.css","D:/Proyectos/htarg.github.io/<no source>"],"names":[],"mappings":"AAAA;ECAA,mBAAA;EAAA,kBAAA;ADEA;;AAEA;;;;ECJA,kBAAA;EAAA,qBAAA;ADSA;;AAEA;ECXA,mBAAA;EAAA,gBAAA;EAAA,mBAAA;EAAA,kBAAA;ADaA;;AAEA;ECfA,iBAAA;EAAA,gBAAA;EAAA,mBAAA;EAAA,kBAAA;ADiBA","file":"markdown-styles.module.css","sourcesContent":[".markdown {\n  @apply text-lg leading-relaxed;\n}\n\n.markdown p,\n.markdown ul,\n.markdown ol,\n.markdown blockquote {\n  @apply my-6;\n}\n\n.markdown h2 {\n  @apply text-3xl mt-12 mb-4 leading-snug;\n}\n\n.markdown h3 {\n  @apply text-2xl mt-8 mb-4 leading-snug;\n}\n",null]}]);
+exports.push([module.i, ".markdown-styles_markdown__1x9gM {\n  font-size: 1.125rem;\n  line-height: 1.625;\n}\n\n.markdown-styles_markdown__1x9gM a {\n  color: #3182ce;\n}\n\n.markdown-styles_markdown__1x9gM p,\n.markdown-styles_markdown__1x9gM ul,\n.markdown-styles_markdown__1x9gM ol,\n.markdown-styles_markdown__1x9gM blockquote {\n  margin-top: 1.5rem;\n  margin-bottom: 1.5rem;\n}\n\n.markdown-styles_markdown__1x9gM h2 {\n  font-size: 1.875rem;\n  margin-top: 3rem;\n  margin-bottom: 1rem;\n  line-height: 1.375;\n}\n\n.markdown-styles_markdown__1x9gM h3 {\n  font-size: 1.5rem;\n  margin-top: 2rem;\n  margin-bottom: 1rem;\n  line-height: 1.375;\n}\n", "",{"version":3,"sources":["D:/Proyectos/htarg.github.io/components/markdown-styles.module.css","D:/Proyectos/htarg.github.io/<no source>"],"names":[],"mappings":"AAAA;ECAA,mBAAA;EAAA,kBAAA;ADEA;;AAEA;ECJA,cAAA;ADMA;;AAEA;;;;ECRA,kBAAA;EAAA,qBAAA;ADaA;;AAEA;ECfA,mBAAA;EAAA,gBAAA;EAAA,mBAAA;EAAA,kBAAA;ADiBA;;AAEA;ECnBA,iBAAA;EAAA,gBAAA;EAAA,mBAAA;EAAA,kBAAA;ADqBA","file":"markdown-styles.module.css","sourcesContent":[".markdown {\n  @apply text-lg leading-relaxed;\n}\n\n.markdown a {\n  @apply text-blue-600;\n}\n\n.markdown p,\n.markdown ul,\n.markdown ol,\n.markdown blockquote {\n  @apply my-6;\n}\n\n.markdown h2 {\n  @apply text-3xl mt-12 mb-4 leading-snug;\n}\n\n.markdown h3 {\n  @apply text-2xl mt-8 mb-4 leading-snug;\n}\n",null]}]);
 // Exports
 exports.locals = {
 	"markdown": "markdown-styles_markdown__1x9gM"
@@ -23308,18 +23334,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_error__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_error__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _components_container__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/container */ "./components/container.js");
 /* harmony import */ var _components_post_body__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/post-body */ "./components/post-body.js");
-/* harmony import */ var _components_header__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/header */ "./components/header.js");
-/* harmony import */ var _components_post_header__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/post-header */ "./components/post-header.js");
-/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/layout */ "./components/layout.js");
-/* harmony import */ var _components_post_title__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/post-title */ "./components/post-title.js");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! next/head */ "./node_modules/next/dist/next-server/lib/head.js");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _lib_constants__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../lib/constants */ "./lib/constants.js");
+/* harmony import */ var _components_post_header__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/post-header */ "./components/post-header.js");
+/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/layout */ "./components/layout.js");
+/* harmony import */ var _components_post_title__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/post-title */ "./components/post-title.js");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! next/head */ "./node_modules/next/dist/next-server/lib/head.js");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_8__);
 var _jsxFileName = "D:\\Proyectos\\htarg.github.io\\pages\\posts\\[slug].js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
 
 
 
@@ -23341,66 +23363,66 @@ function Post(_ref) {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 17,
+        lineNumber: 15,
         columnNumber: 12
       }
     });
   }
 
-  return __jsx(_components_layout__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  return __jsx(_components_layout__WEBPACK_IMPORTED_MODULE_6__["default"], {
     preview: preview,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20,
+      lineNumber: 18,
       columnNumber: 5
     }
   }, __jsx(_components_container__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
+      lineNumber: 19,
       columnNumber: 7
     }
-  }, router.isFallback ? __jsx(_components_post_title__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  }, router.isFallback ? __jsx(_components_post_title__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
+      lineNumber: 21,
       columnNumber: 11
     }
-  }, "Loading\u2026") : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("article", {
+  }, "Cargando\u2026") : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("article", {
     className: "mb-32",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26,
+      lineNumber: 24,
       columnNumber: 13
     }
-  }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_9___default.a, {
+  }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_8___default.a, {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27,
+      lineNumber: 25,
       columnNumber: 15
     }
   }, __jsx("title", {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28,
+      lineNumber: 26,
       columnNumber: 17
     }
-  }, post.title, " | Next.js Blog Example with ", _lib_constants__WEBPACK_IMPORTED_MODULE_10__["CMS_NAME"]), __jsx("meta", {
+  }, post.title, " | Hattrick Argentina"), __jsx("meta", {
     property: "og:image",
     content: post.ogImage.url,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31,
+      lineNumber: 29,
       columnNumber: 17
     }
-  })), __jsx(_components_post_header__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  })), __jsx(_components_post_header__WEBPACK_IMPORTED_MODULE_5__["default"], {
     title: post.title,
     coverImage: post.coverImage,
     date: post.date,
@@ -23408,7 +23430,7 @@ function Post(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33,
+      lineNumber: 31,
       columnNumber: 15
     }
   }), __jsx(_components_post_body__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -23416,7 +23438,7 @@ function Post(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39,
+      lineNumber: 37,
       columnNumber: 15
     }
   })))));
@@ -23424,7 +23446,7 @@ function Post(_ref) {
 
 /***/ }),
 
-/***/ 3:
+/***/ 2:
 /*!*****************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fposts%2F%5Bslug%5D&absolutePagePath=D%3A%5CProyectos%5Chtarg.github.io%5Cpages%5Cposts%5C%5Bslug%5D.js ***!
   \*****************************************************************************************************************************************************/
@@ -23447,5 +23469,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=[slug].js.map
