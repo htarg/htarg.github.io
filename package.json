@@ -1,12 +1,15 @@
 {
   "name": "blog-starter",
+  "homepage": "https://htarg.github.io/",
   "version": "1.0.0",
   "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next start",
     "export": "next export",
-    "deploy": "npm run build && npm run export && gh-pages -d out -b master"
+    "create:nojekyll": "touch out/.nojekyll",
+    "push:ghpages": "gh-pages -d out -b master",
+    "deploy": "npm run build && npm run export && npm run create:nojekyll && npm run push:ghpages"
   },
   "dependencies": {
     "classnames": "2.2.6",
