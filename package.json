@@ -8,8 +8,10 @@
     "start": "next start",
     "export": "next export",
     "create:nojekyll": "touch out/.nojekyll",
-    "push:ghpages": "gh-pages -d out -b master",
-    "deploy": "npm run build && npm run export && npm run create:nojekyll && npm run push:ghpages"
+    "create:cname": "echo blog.htarg.com >> out/CNAME",
+    "create:others": "npm run create:nojekyll && npm run create:cname",
+    "push:ghpages": "gh-pages -t -d out -b master",
+    "deploy": "npm run build && npm run export && npm run create:others && npm run push:ghpages"
   },
   "dependencies": {
     "classnames": "2.2.6",
